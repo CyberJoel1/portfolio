@@ -1,0 +1,27 @@
+{
+    "HOME": {
+      "title": "Alert Dialog",
+      "href": "/docs/primitives/alert-dialog",
+      "description": "HOME"
+    },
+    "ABOUT_ME": {
+      "title": "Hover Card",
+      "href": "/docs/primitives/hover-card",
+      "description": "ABOUT ME"
+    },
+    "SKILLS": {
+      "title": "Scroll-area",
+      "href": "/docs/primitives/scroll-area",
+      "description": "SKILLS"
+    },
+    "WORKS": {
+      "title": "Progress",
+      "href": "/docs/primitives/progress",
+      "description": "WORKS"
+    },
+    "CONTACT": {
+      "title": "Scroll-area2",
+      "href": "/docs/primitives/scroll-area",
+      "description": "CONTACT"
+    }
+  }

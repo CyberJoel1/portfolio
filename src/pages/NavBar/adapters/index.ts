@@ -1,0 +1,1 @@
+export {adaptMenuItems} from './menuAdapter';
