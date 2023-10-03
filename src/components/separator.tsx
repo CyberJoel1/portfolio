@@ -1,12 +1,12 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
-import useCustomHook from '@/hooks/useCustomImportSvg';
+import useCustomImportSvg from '@/hooks/useCustomImportSvg';
+import { TypesSvgIcons } from '@/config/icons/enums/typesSvgIcons';
 
 
 interface Props {
-  svgName: string;
+  svgName?: TypesSvgIcons;
 }
 
 const imageStyle = {
@@ -17,12 +17,13 @@ const imageStyle = {
 };
 
 const SeparatorComponent: React.FC<Props> = ({ svgName }) => {
-    const { importedSvg } = useCustomHook(svgName);
+  
+    const { importedSvg } = useCustomImportSvg(svgName);
 
   return (
     <div className="flex items-center">
-      <div className="border-t border-gray-300 flex-grow"></div>
-      <div className="mx-2">
+      <div className="border-t border-gray-400 flex-grow"></div>
+      <div className={importedSvg ?"mx-2":""}>
         {importedSvg ? (
           <Image
             src={importedSvg}
@@ -37,7 +38,7 @@ const SeparatorComponent: React.FC<Props> = ({ svgName }) => {
           <div className="mt-5"></div>
         )}
       </div>
-      <div className="border-t border-gray-300 flex-grow"></div>
+      <div className="border-t border-gray-400 flex-grow"></div>
     </div>
   );
 };

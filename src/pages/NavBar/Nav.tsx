@@ -4,36 +4,22 @@ import * as React from "react";
 import { adaptMenuItems } from './adapters'
 import Image from 'next/image'
 import { NavigationMenu, NavigationMenuList } from "@/components/ui/navigation-menu";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import ListItem from '@/pages/NavBar/components/ListItem';
+import useModifyChild from "./hooks/useModifyChild";
 
 interface Props {
   classNames: String
 }
 export function Nav({ classNames }: Props) {
 
-
-
-  const navigationMenuRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-
-    if (navigationMenuRef.current) {
-
-      const firstChild: Element | null | HTMLElement = navigationMenuRef.current.firstElementChild;
-
-      if (firstChild) {
-        firstChild.setAttribute('style', 'width: 100%');
-        firstChild.setAttribute('className', 'w-full');
-      }
-
-    }
-  }, []);
+  const navigationMenuRef = React.useRef<HTMLElement | null>(null);
+  
+  const { state } = useModifyChild(navigationMenuRef);
 
   return (
     <div className={`grid grid-cols-1 p-1 bg-black lg:grid-cols-[1fr_auto] h-max ${classNames}`}>
       <div className="justify-self-center flex flex-row items-center ml-7 py-1 md:justify-self-start">
-        {/*lg:block md:hidden block*/}
 
         <Image
           src="/logo/logoJoel.png"
@@ -42,7 +28,6 @@ export function Nav({ classNames }: Props) {
           height={250}
           className=""
         />
-
 
       </div>
       <NavigationMenu className="mx-auto max-w-none w-full" ref={navigationMenuRef}>

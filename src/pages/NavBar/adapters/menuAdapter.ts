@@ -1,4 +1,4 @@
-import ItemsMenu from "@/data/MenuPrincipal.json";
+import ItemsMenu from "@/pages/NavBar/data/MenuPrincipal.json";
 
 export function adaptMenuItems(): Record<string,MenuItem> {
     

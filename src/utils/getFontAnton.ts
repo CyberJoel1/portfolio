@@ -1,10 +1,9 @@
 import localFont from 'next/font/local'
 
-
 export const anton = localFont({
     src: [
         {
-            path: '../assets/Anton/Anton-Regular.ttf',
+            path: '../assets/Oswald/Oswald-VariableFont_wght.ttf',
             weight: '400'
         }
     ],

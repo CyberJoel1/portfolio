@@ -24,4 +24,16 @@ export enum TypesSvgIcons {
     TOOLS_ICON              = 'tools',
     VIEWDASHBOARD_ICON      = 'view-dashboard-edit',
     ADMIN_ICON              = 'account-tie',
+    NODEDOT_JS              = 'nodedotjs',
+    JAVA                    = 'java',
+    API                     = 'api',
+    WEBSOCKET               = 'websocket',
+    NEO4J                   = 'neo4j',
+    TYPESCRIPT              = 'typescript',
+    SUPABASE                = 'supabase',
+    JSONWEBTOKEN            = 'jsonwebtokens',
+    LEAFLET                 = 'leaflet',
+    SEQUELIZE               = 'sequelize',
+    EJS                     = 'ejs',
+    EMPTY                   = ''
 }

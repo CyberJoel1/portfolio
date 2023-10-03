@@ -1,12 +1,10 @@
 
 import ImageDeveloper from "@/components/Images/imageDeveloper";
-import SeparatorComponent from "@/components/separator";
 import TextWriterHeader from "@/components/textWriterHeader";
-import { TypesSvgIcons } from "@/domain/enums/typesSvgIcons";
 import AboutMe from "@/pages/AboutMe/aboutMe";
 import Nav from "@/pages/NavBar/Nav";
-
-
+import Skills from "@/pages/Skills/skills";
+import Works from "@/pages/Works/works";
 
 export default function Home() {
 
@@ -18,20 +16,20 @@ export default function Home() {
             <Nav classNames='' />
             <TextWriterHeader classNames="flex justify-center items-center h-full"
               textColor="blanco"
-              text="Hello, i am Joel Velasco and software developer" />
+              text="Hello, i'm Joel Velasco and software developer" />
           </section>
           <ImageDeveloper classNames="col-span-2" />
         </header>
         <section id="about-me" aria-label="Descripción de mi" className="min-h-min bg-slate-200 grid justify-items-center">
           <AboutMe classNames="pt-8 font-medium w-[80%]" />
         </section>
-        <section id="skills" aria-label="Habilidades de mi" className="min-h-min bg-slate-200 grid justify-items-center h-[450px]">
-          <div className="pt-8 font-medium w-[80%]">
-            <h2 className="text-center">SKILLS</h2>
-            <SeparatorComponent svgName={`${TypesSvgIcons.ADMIN_ICON}`}/>
-          </div>
-
+        <section id="skills" aria-label="Habilidades de mi" className="min-h-min bg-slate-200 grid justify-items-center">
+          <Skills classNames="pt-8 font-medium w-[80%]" />
         </section>
+        <section id="works" aria-label="Trabajos hechos por mi" className="min-h-min bg-slate-200 grid justify-items-center">
+          <Works classNames="pt-8 font-medium w-[80%]"/>
+        </section>
+        <p className="p-12">Hola</p>
       </main>
     </>
   )

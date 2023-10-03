@@ -1,8 +1,11 @@
+"use client"
+import { DESCRIPCION_ICONS } from '@/config/icons/const/descriptionIcons';
+import { TypesSvgIcons } from '@/config/icons/enums/typesSvgIcons';
 import { useState, useEffect } from 'react';
 
-function useCustomHook(nameSvg = 'home-question.svg') {
+function useCustomImportSvg(nameSvg:TypesSvgIcons = TypesSvgIcons.EMPTY) {
     const [impSVG, setImpSVG] = useState<string | null>(null);
-
+    const descriptionSvg = DESCRIPCION_ICONS[nameSvg];
     useEffect(() => {
       const loadSVG = async () => {
         try {
@@ -18,7 +21,8 @@ function useCustomHook(nameSvg = 'home-question.svg') {
 
   return {
     importedSvg : impSVG,
+    descriptionSvg
   };
 }
 
-export default useCustomHook;
+export default useCustomImportSvg;
