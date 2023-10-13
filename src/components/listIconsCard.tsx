@@ -16,8 +16,9 @@ const ListIconsCard: React.FC<Props> = ({ icons }) => {
             const { image, textDescription } = boxIcon;
             return (
                 <div key={textDescription} className="grid grid-rows-2">
+                    {image?
                     <Image
-                        src={image || ''}
+                        src={image}
                         alt="Logo"
                         sizes="50vw"
                         width={500}
@@ -30,7 +31,7 @@ const ListIconsCard: React.FC<Props> = ({ icons }) => {
                             height: 'auto',
                             margin: 'auto'
                         }}
-                    />
+                    />:null}
                     <p className="text-center text-xs text-muted-foreground">{textDescription}</p>
                 </div>
             )

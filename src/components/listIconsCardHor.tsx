@@ -19,10 +19,10 @@ const ListIconsCardHor: React.FC<Props> = ({ icons, link }) => {
         containerBoxIcon.map((boxIcon) => {
             const { image, textDescription } = boxIcon;
             return (
-                <Link href={link[0]} target="_blank">
+                <Link href={link[0]} target="_blank" key={textDescription}>
                     <div key={textDescription}
                         className="grid grid-cols-2 hover:bg-slate-200 p-2 justify-items-end cursor-pointer rounded-lg">
-                        <Image
+                        {image?<Image
                             src={image || ''}
                             alt="Logo"
                             sizes="50vw"
@@ -36,7 +36,7 @@ const ListIconsCardHor: React.FC<Props> = ({ icons, link }) => {
                                 height: 'auto',
                                 margin: 'auto'
                             }}
-                        />
+                        />:null}
                         <p className="text-center text-sm text-blue-600 justify-start">{textDescription}</p>
                     </div>
                 </Link>

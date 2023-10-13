@@ -17,18 +17,19 @@ const ListWorks: React.FC<Props> = ({ }) => {
             {WORKS_DATA.map((work: TemplateCardWork) => {
                 const { id, image, functionalities, tools, title, description, linkGithub, link } = work;
                 return (
-                    <CardWork title={title} description={description} key={id}  
-                    linkGithub={linkGithub} linkProject={link}
+                    <CardWork title={title} description={description} key={id}
+                        linkGithub={linkGithub} linkProject={link}
                     >
-                        <Image
-                            src={image || ''}
-                            alt="Logo"
-                            sizes="50vw"
-                            width={500}
-                            height={300}
-                            className="rounded w-full h-40 bg-blue-500 hover:transform 
-                            hover:scale-110 hover:transition-transform hover:duration-300"
-                        />
+                        {image? (
+                            <Image
+                                src={image}
+                                alt="Logo"
+                                sizes="50vw"
+                                width={500}
+                                height={300}
+                                className="rounded w-full h-40 bg-blue-500 hover:transform hover:scale-110 hover:transition-transform hover:duration-300"
+                            />
+                        ) : null}
                         <FunctionalitiesWork functionalities={functionalities} />
                         <SeparatorComponent />
                         <div className='grid grid-cols-4 md:grid-cols-5 mt-9'>

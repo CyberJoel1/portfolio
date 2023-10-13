@@ -2,9 +2,11 @@
 import ImageDeveloper from "@/components/Images/imageDeveloper";
 import TextWriterHeader from "@/components/textWriterHeader";
 import AboutMe from "@/pages/AboutMe/aboutMe";
+import Contact from "@/pages/Contact/contact";
 import Nav from "@/pages/NavBar/Nav";
 import Skills from "@/pages/Skills/skills";
 import Works from "@/pages/Works/works";
+
 
 export default function Home() {
 
@@ -28,6 +30,9 @@ export default function Home() {
         </section>
         <section id="works" aria-label="Trabajos hechos por mi" className="min-h-min bg-slate-200 grid justify-items-center">
           <Works classNames="pt-8 font-medium w-[80%]"/>
+        </section>
+        <section id="contact_me" aria-label="Sección para contactarme" className="min-h-min bg-slate-200 grid justify-items-center">
+          <Contact classNames="pt-8 font-medium w-[80%]"/>
         </section>
         <p className="p-12">Hola</p>
       </main>

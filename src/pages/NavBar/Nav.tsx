@@ -1,5 +1,4 @@
 "use client";
-
 import * as React from "react";
 import { adaptMenuItems } from './adapters'
 import Image from 'next/image'
@@ -11,16 +10,17 @@ import useModifyChild from "./hooks/useModifyChild";
 interface Props {
   classNames: String
 }
+
+const menuItems = adaptMenuItems();
+
 export function Nav({ classNames }: Props) {
 
   const navigationMenuRef = React.useRef<HTMLElement | null>(null);
-  
   const { state } = useModifyChild(navigationMenuRef);
 
   return (
     <div className={`grid grid-cols-1 p-1 bg-black lg:grid-cols-[1fr_auto] h-max ${classNames}`}>
       <div className="justify-self-center flex flex-row items-center ml-7 py-1 md:justify-self-start">
-
         <Image
           src="/logo/logoJoel.png"
           alt="Logo"
@@ -28,14 +28,10 @@ export function Nav({ classNames }: Props) {
           height={250}
           className=""
         />
-
       </div>
       <NavigationMenu className="mx-auto max-w-none w-full" ref={navigationMenuRef}>
-
         <NavigationMenuList className="flex-grow flex flex-col md:flex-row" >
-
-          {Object.entries(adaptMenuItems()).map(([key, value]: [string, MenuItem]) => (
-
+          {Object.entries(menuItems).map(([key, value]: [string, MenuItem]) => (
             <ListItem
               key={key}
               title={value.title}
@@ -45,7 +41,6 @@ export function Nav({ classNames }: Props) {
               {value.description}
             </ListItem>
           ))}
-
         </NavigationMenuList>
       </NavigationMenu>
     </div>
