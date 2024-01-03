@@ -21,23 +21,24 @@ const ListIconsCardHor: React.FC<Props> = ({ icons, link }) => {
             return (
                 <Link href={link[0]} target="_blank" key={textDescription}>
                     <div key={textDescription}
-                        className="grid grid-cols-2 hover:bg-slate-200 p-2 justify-items-end cursor-pointer rounded-lg">
+                        className="flex flex-row p-2 justify-items-end cursor-pointer rounded-lg text-red-600">
                         {image?<Image
                             src={image || ''}
                             alt="Logo"
                             sizes="50vw"
                             width={500}
                             height={300}
-                            className="justify-self-end"
+                            className="justify-self-end "
                             style={{
                                 maxWidth: '100%',
                                 maxHeight: '100vh',
-                                width: '20px',
+                                width: '27px',
                                 height: 'auto',
-                                margin: 'auto'
+                                margin: 'auto',
+                                paddingRight: '6px'                            
                             }}
                         />:null}
-                        <p className="text-center text-sm text-blue-600 justify-start">{textDescription}</p>
+                        <p className="text-center text-base text-gray-600 justify-start">{textDescription}</p>
                     </div>
                 </Link>
             )

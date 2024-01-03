@@ -3,6 +3,7 @@ import ImageDeveloper from "@/components/Images/imageDeveloper";
 import TextWriterHeader from "@/components/textWriterHeader";
 import AboutMe from "@/pages/AboutMe/aboutMe";
 import Contact from "@/pages/Contact/contact";
+import Footer from "@/pages/Footer/footer";
 import Nav from "@/pages/NavBar/Nav";
 import Skills from "@/pages/Skills/skills";
 import Works from "@/pages/Works/works";
@@ -34,7 +35,10 @@ export default function Home() {
         <section id="contact_me" aria-label="Sección para contactarme" className="min-h-min bg-slate-200 grid justify-items-center">
           <Contact classNames="pt-8 font-medium w-[80%]"/>
         </section>
-        <p className="p-12">Hola</p>
+        <section id="footer" aria-label="Sección para el pie de pagina" className="min-h-min grid justify-items-center">
+          <Footer classNames="pt-8 font-medium w-[80%]"/>
+        </section>
+       
       </main>
     </>
   )
